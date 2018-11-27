@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+//import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -19,7 +20,7 @@ public class Menu implements Serializable {
 	//SERIALIZANDO A CLASSE PARA TRANSPORTE EM REDE
 	private static final long serialVersionUID = -5770402180091137703L;
 	
-	
+	@Id
 	private String id;
 	private int menuId;
 	private String titulo;
@@ -63,7 +64,6 @@ public class Menu implements Serializable {
 
 
 
-	@Id
 	public String getId() {
 		return id;
 	}
